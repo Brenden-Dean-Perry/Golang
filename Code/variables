@@ -1,0 +1,24 @@
+package main
+
+func constants_and_variables() {
+	const pi = 3.14 // constant declaration
+	var x = 5       // variable declaration with type inference
+	println("5 * pi =", float64(x)*pi)
+}
+
+func delay_variable_declaration() {
+	var a int // declaration without initialization, defaults to zero value
+	a = 10
+	println("a:", a)
+}
+
+func short_variable_declaration() {
+	b := 20 // shorthand for var b int = 20. Type is inferred.
+	println("b:", b)
+}
+
+func multiple_variable_declaration() {
+	var x, y, z int = 1, 2, 3
+	var m, n, o = 4, "hello", 5.6 // type inference
+	p, q, r := 7, "world", 8.9    // shorthand declaration with type inference
+}
