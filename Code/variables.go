@@ -21,4 +21,8 @@ func multiple_variable_declaration() {
 	var x, y, z int = 1, 2, 3
 	var m, n, o = 4, "hello", 5.6 // type inference
 	p, q, r := 7, "world", 8.9    // shorthand declaration with type inference
+
+	println("x:", x, "y:", y, "z:", z)
+	println("m:", m, "n:", n, "o:", o)
+	println("p:", p, "q:", q, "r:", r)
 }
