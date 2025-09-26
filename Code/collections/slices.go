@@ -1,4 +1,4 @@
-package main
+package collections
 
 // slices are just a wrapper around arrays. They are more flexible and powerful than arrays.
 // They have additional functionality and can be resized dynamically.

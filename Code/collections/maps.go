@@ -1,4 +1,4 @@
-package main
+package collections
 
 // MapExample demonstrates the use of maps in Go
 // Maps are collections of key-value pairs where keys are unique and you can retrieve values using their corresponding keys.

@@ -1,4 +1,4 @@
-package main
+package collections
 
 var array = [3]string{} // 3 elements, all initialized to the zero value for strings ("")
 // Arrays have a fixed size and type and stored in contiguous memory locations.

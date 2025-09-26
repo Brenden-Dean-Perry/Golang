@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"golang/datatypes"
 )
 
 func main() {
@@ -9,9 +10,9 @@ func main() {
 	var x = 5
 
 	fmt.Println("Hello, World!")
-	print_types()
+	datatypes.PrintTypes()
 	fmt.Println()
-	fmt.Println("2 + 3 =", addit(2, 3))
+	fmt.Println("2 + 3 =", Addit(2, 3))
 	fmt.Println("5 * pi =", float64(x)*pi)
 	fmt.Println()
 }

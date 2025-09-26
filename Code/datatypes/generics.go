@@ -1,4 +1,4 @@
-package main
+package datatypes
 
 // demo of generics in Go
 // Generic functions allow you to write functions that can operate on different types without sacrificing type safety.

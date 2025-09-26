@@ -1,4 +1,4 @@
-package main
+package concurrnecy
 
 // Go routines are lightweight threads managed by the Go runtime.
 // They are cheaper than traditional threads and can be created in large numbers.
@@ -20,7 +20,7 @@ var dbData = []string{"data1", "data2", "data3", "data4", "data5"}
 
 // fetchData simulates fetching data from a database with a delay
 // Launch each DB call in a separate goroutine. Currently, it will spawn 5 goroutines in the background but then exit the function becuase it does not wait for them to complete.
-func simulateFetchData(query string) {
+func SimulateFetchData(query string) {
 	t0 := time.Now()
 	for i := 0; i < len(dbData); i++ {
 		go simulateDBCall(i) // Launches in background but does not wait for completion
@@ -30,14 +30,14 @@ func simulateFetchData(query string) {
 
 func simulateDBCall(i int) {
 	time.Sleep(2 * time.Second) // Simulate delay
-	fmt.Sprintf("Result for %s", dbData[i])
+	fmt.Printf("Result for %s\n", dbData[i])
 }
 
 // In order to wait for all goroutines to finish before exiting the function, we can use sync.WaitGroup.
 var wg = sync.WaitGroup{}
 
 // fetchData simulates fetching data from a database with a delay
-func simulateFetchDataWithWaitGroup(query string) {
+func SimulateFetchDataWithWaitGroup(query string) {
 	t0 := time.Now()
 	for i := 0; i < len(dbData); i++ {
 		wg.Add(1)                         // Increment the WaitGroup counter
@@ -49,7 +49,7 @@ func simulateFetchDataWithWaitGroup(query string) {
 
 func simulateDBCallWithWaitGroup(i int) {
 	time.Sleep(2 * time.Second) // Simulate delay
-	fmt.Sprintf("Result for %s", dbData[i])
+	fmt.Printf("Result for %s", dbData[i])
 	wg.Done() // Decrement the counter when the goroutine completes
 }
 
@@ -60,7 +60,7 @@ var results = []string{}
 var mu = sync.Mutex{}
 
 // fetchData simulates fetching data from a database with a delay
-func simulateFetchDataWithWaitGroupAndMutexLock(query string) {
+func SimulateFetchDataWithWaitGroupAndMutexLock(query string) {
 	t0 := time.Now()
 	for i := 0; i < len(dbData); i++ {
 		wg.Add(1)                                 // Increment the WaitGroup counter
@@ -89,7 +89,7 @@ var rwMu = sync.RWMutex{}
 // simulateDBCallWithWaitGroupAndMutex simulates a database call and appends the result to a shared slice
 // Note: Where you place the lock and unlock is important. You want to minimize the time the lock is held to avoid blocking other goroutines!
 // If you place the lock before the sleep, it will serialize the calls and defeat the purpose of using goroutines.
-func simulateDBCallWithWaitGroupAndRWMutex(i int) {
+func SimulateDBCallWithWaitGroupAndRWMutex(i int) {
 	time.Sleep(2 * time.Second) // Simulate delay
 	rwMu.Lock()
 	results = append(results, fmt.Sprintf("Result for %s", dbData[i]))

@@ -1,11 +1,11 @@
-package main
+package datatypes
 
 import (
 	"fmt"
 )
 
-// print_types prints various data types and their values
-func print_types() {
+// PrintTypes prints various data types and their values
+func PrintTypes() {
 	var a int = 42
 	var b int8 = 8
 	var c int16 = 16

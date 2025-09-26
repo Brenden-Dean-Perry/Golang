@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func declare_pointer_variable() {
+func Declare_pointer_variable() {
 	var p *int32 = new(int32) // pointer to an int32 (aka a memory address that holds an int32 value).
 	// Note we need to use the asterisk to denote a pointer type.
 	// Also, we use the new function to allocate memory for the int32 value and return a pointer to it.
@@ -13,7 +13,7 @@ func declare_pointer_variable() {
 }
 
 // set_value_at_pointer sets the value at the memory address pointed to by the pointer
-func set_value_at_pointer() {
+func Set_value_at_pointer() {
 	var p *int32 = new(int32) // pointer to an int32
 	*p = 42                   // Set the value at the memory address to 42
 	// Note we use the asterisk to dereference the pointer and set the value at that address.
@@ -23,7 +23,7 @@ func set_value_at_pointer() {
 }
 
 // nil_pointer_example demonstrates a nil pointer (which does not point to any memory address)
-func nil_pointer_example() {
+func Nil_pointer_example() {
 	var p *int32 // nil pointer (does not point to any memory address)
 	// Note that if we try to dereference a nil pointer, it will cause a runtime error (panic).
 	if p == nil {
@@ -35,7 +35,7 @@ func nil_pointer_example() {
 }
 
 // address_of_variable demonstrates getting the address of a variable using the address-of operator (&)
-func address_of_variable() {
+func Address_of_variable() {
 	var p *int32 = new(int32) // pointer to an int32
 	var x int32
 	p = &x  // Set the pointer to the address of the variable x using the address-of operator (&)
@@ -48,7 +48,7 @@ func address_of_variable() {
 
 // passing_by_reference demonstrates passing an array by reference using a pointer.
 // This allows the function to modify the original array rather than a copy of the array.
-func passing_by_reference(data *[5]int32) {
+func Passing_by_reference(data *[5]int32) {
 	// Modify the array elements
 	for i := 0; i < len(data); i++ {
 		data[i] *= 2
