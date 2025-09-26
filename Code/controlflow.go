@@ -1,7 +1,7 @@
 package main
 
 // If-else statement
-func if_else_example(x int) string {
+func If_else_example(x int) string {
 	if x%2 == 0 {
 		return "even"
 	} else if x < 0 {
@@ -12,7 +12,7 @@ func if_else_example(x int) string {
 }
 
 // Switch statement
-func switch_example(day int) string {
+func Switch_example(day int) string {
 	// No need for break statements; Go automatically breaks after each case
 	switch day {
 	case 1:
@@ -35,7 +35,7 @@ func switch_example(day int) string {
 }
 
 // Switch with multiple discrete conditions
-func conditional_switch_example(score int) string {
+func Conditional_switch_example(score int) string {
 	switch score {
 	case 90, 100:
 		return "A"

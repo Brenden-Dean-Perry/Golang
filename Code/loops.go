@@ -1,13 +1,13 @@
 package main
 
-func for_loop_example() {
+func For_loop_example() {
 	// for loop with initialization, condition, and post statement
 	for i := 0; i < 5; i++ {
 		println("Iteration:", i)
 	}
 }
 
-func while_loop_example() {
+func While_loop_example() {
 	// while loop using for with only a condition
 	j := 0
 	for j < 5 {
@@ -16,7 +16,7 @@ func while_loop_example() {
 	}
 }
 
-func while_loop_with_break() {
+func While_loop_with_break() {
 	// while loop with break statement
 	k := 0
 	for {
@@ -28,7 +28,7 @@ func while_loop_with_break() {
 	}
 }
 
-func loop_with_continue() {
+func Loop_with_continue() {
 	// for loop with continue statement
 	for m := 0; m < 10; m++ {
 		if m%2 == 0 {
@@ -38,7 +38,7 @@ func loop_with_continue() {
 	}
 }
 
-func loop_with_range() {
+func Loop_with_range() {
 	// for loop using range to iterate over a slice
 	numbers := []int{1, 2, 3, 4, 5}
 	for index, value := range numbers {
@@ -47,7 +47,7 @@ func loop_with_range() {
 }
 
 // Note: The order of iteration over maps is not specified and can vary from one iteration to the next.
-func loop_over_map() {
+func Loop_over_map() {
 	// for loop using range to iterate over a map
 	person := map[string]string{"name": "Alice", "city": "Wonderland"}
 	for key, value := range person {

@@ -14,7 +14,7 @@ import (
 // Additionally, it is important to understand utf8. A rune is a Unicode code point, which can be one or more bytes.
 // UTF-8 is a variable-width encoding that uses one to four bytes to represent a rune.
 
-func indexing_a_string() {
+func Indexing_a_string() {
 	var myString string = "résumé"
 	var indexed byte = myString[0] // Accessing the first byte
 	fmt.Println("First byte (in bytes):", indexed)
@@ -26,7 +26,7 @@ func indexing_a_string() {
 // However, the value will always be the rune itself (not the byte value at that index).
 // In summary, Go has made it easy to work with strings and Unicode.
 // But it's important to understand the underlying concepts of bytes, runes, and UTF-8 encoding to avoid pitfalls when manipulating strings.
-func string_iteration() {
+func String_iteration() {
 	var myString string = "résumé"
 	fmt.Println("Iterating over bytes:")
 	for i, v := range myString {
@@ -38,7 +38,7 @@ func string_iteration() {
 // This is useful when you want to work with individual characters (runes) in a string, especially when dealing with multi-byte characters.
 // The length of the slice will be equal to the number of runes in the string, not the number of bytes.
 // Thus, the number of runes will be equal to the length of the slice of the array as you would expect in other programming languages.
-func string_iteration_runes() {
+func String_iteration_runes() {
 	var myString = []rune("résumé")
 	fmt.Println("Iterating over runes:")
 	for i, v := range myString {
@@ -47,11 +47,11 @@ func string_iteration_runes() {
 }
 
 // get_string_length_in_bytes returns the length of the string in bytes
-func get_string_length_in_bytes(s string) int {
+func Get_string_length_in_bytes(s string) int {
 	return len(s) // returns the length in bytes
 }
 
 // get_string_rune_count returns the number of runes (Unicode code points) in the string
-func get_string_rune_count(s string) int {
+func Get_string_rune_count(s string) int {
 	return utf8.RuneCountInString(s) // returns the number of runes (Unicode code points)
 }

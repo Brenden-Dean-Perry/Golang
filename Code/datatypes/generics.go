@@ -4,7 +4,7 @@ package datatypes
 // Generic functions allow you to write functions that can operate on different types without sacrificing type safety.
 // This is achieved using type parameters, which are specified in square brackets [] after the function name.
 // sumSlice takes a slice of numbers (int, float32, or float64) and returns their sum
-func sumSlice[T int | float32 | float64](numbers []T) T {
+func SumSlice[T int | float32 | float64](numbers []T) T {
 	var sum T
 	for _, number := range numbers {
 		sum += number
@@ -14,7 +14,7 @@ func sumSlice[T int | float32 | float64](numbers []T) T {
 
 // Any allows any type, similar to interface{} in earlier Go versions
 // isEmpty checks if a slice of any type is empty
-func isEmpty[T any](numbers []T) bool {
+func IsEmpty[T any](numbers []T) bool {
 	return len(numbers) == 0
 }
 

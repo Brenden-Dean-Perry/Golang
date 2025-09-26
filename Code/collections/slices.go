@@ -7,14 +7,14 @@ package collections
 var slice = []string{} // An empty slice of strings
 
 // adding elements to a slice
-func add_elements_to_slice() {
+func Add_elements_to_slice() {
 	slice = append(slice, "Learn Go") // append adds elements to the end of the slice
 	slice = append(slice, "Build an app")
 	slice = append(slice, "Deploy to cloud")
 }
 
 // You computer will automatically resize the slice as needed. However there are performance implications to consider.
-func slice_capacity() {
+func Slice_capacity() {
 	var intSlice []int = []int{1, 2, 3} // An empty slice of integers with 3 initial elements
 	intSlice = append(intSlice, 4)      // Append an element to the slice
 	println("Length:", len(intSlice))   // should equal 4
